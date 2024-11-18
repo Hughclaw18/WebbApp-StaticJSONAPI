@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 Driver List</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Formula 1 Driver List</h1>
+    </header>
+
+    <section class="driver-list">
+        <% drivers.forEach(driver => { %>
+            <div class="driver-card">
+                <img src="/images/<%= driver.image %>" alt="<%= driver.name %>" class="driver-img">
+                <div class="driver-info">
+                    <h2><%= driver.name %></h2>
+                    <p>Team: <%= driver.team %></p>
+                    <p>Country: <%= driver.country %></p>
+                </div>
+            </div>
+        <% }) %>
+    </section>
+
+    <footer>
+        <p>Formula 1 Driver List - 2024</p>
+    </footer>
+</body>
+</html>
